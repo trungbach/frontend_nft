@@ -1,0 +1,170 @@
+.sideFilter {
+    width: 380px;
+    position: fixed;
+    right: 0;
+    z-index: 99;
+    top: 72px;
+    bottom: 0;
+    transition: 0.5s ease;
+    @media (max-width: 768px) {
+        & {
+            width: 100%;
+        }
+    }
+    .sideCollapse {
+      height: 100%;
+      background: var(--background-color);
+      overflow-y: auto;
+    }
+  :global {
+      .ant-layout-sider {
+          height: 100vh;
+          display: flex; 
+          flex-direction: column-reverse;
+          justify-content: flex-end;
+          background-color: var(--background-color);
+          .ant-layout-sider-children {
+              height: auto;
+              overflow-y: auto;
+              .ant-collapse {
+                  margin-bottom: 2.6rem;
+                  border-right: none;
+              }
+          }
+      }
+      
+      .ant-layout-sider-trigger {
+          position: relative; 
+      }
+  }
+  
+  .filterTitle {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.6rem;
+    font-weight: 600;
+    padding: 20px !important;
+    user-select: none;
+    background: var(--background-color);
+    color: var(--text-color);
+    svg {
+        font-size: 2.5rem;
+        margin-right: 1rem;
+    }
+}
+  .filterList {
+      display: flex;
+      flex-flow: wrap;
+      & > div {
+          -webkit-box-align: center;
+          align-items: center;
+          border: 1px solid rgb(229, 232, 235);
+          border-radius: 5px;
+          color: rgb(53, 56, 64);
+          background-color: rgb(255, 255, 255);
+          display: flex;
+          height: 40px;
+          margin: 4px;
+          padding: 10px;
+          width: calc(50% - 8px);
+          cursor: pointer;
+          font-weight: 500;
+          &:hover {
+              box-shadow: rgb(4 17 29 / 25%) 0px 0px 8px 0px;
+              transition: all 0.2s ease 0s;
+          }
+      }
+      .isSelected {
+          color: rgb(255, 255, 255);
+          background-color: rgb(32, 129, 226);
+          border-color: rgb(32, 129, 226);
+      }
+  }
+  .filterPrice {
+    :global {
+        .ant-select-selector {
+            background-color: var(--background-color) !important;
+        }
+         
+        .ant-select-selection-item {
+            background: var(--background-color) !important;
+        }
+    }
+    .rangePrice {
+        margin-top: 1.5rem;
+        display: flex;
+        align-items: center;
+        span {
+            margin: 0 1rem;
+        }
+        :global {
+              
+            .ant-input-affix-wrapper {
+                background: var(--lighten-background);
+            }
+            .ant-input {
+                background: var(--background-color) !important;
+                border: 2px solid var(--background-color);
+                color: var(--text-color);
+                flex: 1 0 0%;
+                outline: none;
+                padding: 1rem;
+                min-width: 0px;
+                color: rgba(255, 255, 255, 0.75);
+            }
+        }
+    }
+    .wrongPrice {
+        font-weight: 500;
+        font-size: 12px;
+        color: rgb(235, 87, 87);
+        margin-top: 1.6rem;
+      }
+    .applyPrice {
+        margin-top: 2rem;
+        display: inline-flex;
+        flex-direction: row;
+        -webkit-box-align: center;
+        align-items: center;
+        border-radius: 1rem;
+        -webkit-box-pack: center;
+        justify-content: center;
+        font-size: 16px;
+        font-weight: 600;
+        height: auto;
+        padding: 5px 20px 10px;
+        border: 1px solid var(--lighten-background);
+        background: var(--background-color);
+        &:hover {
+            box-shadow: rgb(4 17 29 / 25%) 0px 0px 8px 0px;
+            transition: all 0.2s ease 0s;
+            border-color: var(--background-color);
+        }
+    }
+    }
+}
+
+.selectPrice {
+  :global {
+      .ant-select-item-option-content {
+          & > div {
+              width: 1rem;
+              height: 2rem;
+              margin-right: 1rem !important;
+          }
+      }
+  }
+}
+
+.chooseBlock {
+    :global {
+        .ant-select-item-option-content {
+            display: flex;
+            align-items: center;
+            & > div:first-child {
+                margin-right: 1rem !important;
+            }
+        }
+    }
+}

@@ -1,0 +1,16 @@
+@import '@/styles/base.scss';
+
+.login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 10rem 0;
+    .logo {
+
+    }
+    .secondaryButton {
+        margin-top: 2rem;
+        padding: 2.5rem 4rem;
+    }
+}

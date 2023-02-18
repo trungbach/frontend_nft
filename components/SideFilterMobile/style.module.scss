@@ -1,0 +1,209 @@
+@import '@/styles/base.scss';
+
+.sideFilter {
+    border-right: 1px solid var(--lighten-background);
+    overflow-y: auto;
+    width: 100%;
+    transition: all 0.4s linear 0s;
+    position: absolute;
+    z-index: 1;
+    &::-webkit-scrollbar-track {
+        background-color: var(--lighten-background);
+    }
+
+    &::-webkit-scrollbar {
+        width: 10px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        border-radius: 10px;
+        background-color: rgb(182, 166, 166);
+	
+    }
+
+    .filterTitle {
+        font-size: 1.6rem;
+        font-weight: 600;
+        padding: 20px !important;
+        user-select: none;
+        background: var(--background-color);
+        color: var(--text-color);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        svg {
+            font-size: 2.5rem;
+            margin-right: 1rem;
+        }
+    }
+    .filterList {
+        display: flex;
+        flex-flow: wrap;
+        & > div {
+            -webkit-box-align: center;
+            align-items: center;
+            border: 1px solid rgb(229, 232, 235);
+            border-radius: 5px;
+            color: rgb(53, 56, 64);
+            display: flex;
+            height: 40px;
+            margin: 4px;
+            padding: 10px;
+            width: calc(50% - 8px);
+            cursor: pointer;
+            font-weight: 500;
+            &:hover {
+                box-shadow: rgb(4 17 29 / 25%) 0px 0px 8px 0px;
+                transition: all 0.2s ease 0s;
+            }
+        }
+        .isSelected {
+            color: rgb(255, 255, 255);
+            background-color: rgb(32, 129, 226);
+            border-color: rgb(32, 129, 226);
+        }
+    }
+    .filterPrice {
+        :global {
+            .ant-select-selector {
+                background-color: var(--background-color) !important;
+            }
+             
+            .ant-select-selection-item {
+                background: var(--background-color) !important;
+            }
+        }
+        .rangePrice {
+            margin-top: 1.5rem;
+            display: flex;
+            align-items: center;
+            span {
+                margin: 0 1rem;
+            }
+            :global {
+              
+                .ant-input-affix-wrapper {
+                    background: var(--lighten-background);
+                }
+                .ant-input {
+                    background: var(--background-color) !important;
+                    border: 2px solid var(--background-color);
+                    color: var(--text-color);
+                    flex: 1 0 0%;
+                    outline: none;
+                    padding: 1rem;
+                    min-width: 0px;
+                    color: rgba(255, 255, 255, 0.75);
+                }
+            }
+        }
+        .wrongPrice {
+            font-weight: 500;
+            font-size: 12px;
+            color: rgb(235, 87, 87);
+            margin-top: 1.6rem;
+          }
+        .applyPrice {
+            margin-top: 2rem;
+            display: inline-flex;
+            flex-direction: row;
+            -webkit-box-align: center;
+            align-items: center;
+            border-radius: 1rem;
+            -webkit-box-pack: center;
+            justify-content: center;
+            font-size: 16px;
+            font-weight: 600;
+            height: auto;
+            padding: 5px 20px 10px;
+            border: 1px solid var(--lighten-background);
+            background: var(--background-color);
+            &:hover {
+                box-shadow: rgb(4 17 29 / 25%) 0px 0px 8px 0px;
+                transition: all 0.2s ease 0s;
+                border-color: var(--background-color);
+            }
+        }
+    }
+    .filterCollections {
+        ul {
+            margin-top: 2rem;
+            max-height: 17rem;
+            padding: 0;
+            overflow-Y: auto;
+            &::-webkit-scrollbar-track {
+                background-color: var(--lighten-background)
+            }
+        
+            &::-webkit-scrollbar {
+                width: 10px;
+            }
+        
+            &::-webkit-scrollbar-thumb {
+                border-radius: 10px;
+                background-color: rgb(182, 166, 166);
+            }
+            li {
+                cursor: pointer;
+                display: flex;
+                align-items: center;
+                margin: 1rem 0;
+                position: relative;
+                &:hover {
+                    & > div {
+                        transform: scale(1.1);
+                        & > img {
+                            height: 100%;
+                            object-fit: cover;
+                            transition: opacity 400ms ease 0s;
+                            width: 100%;
+                        }
+                    }
+                }
+                & > div {
+                    margin-right: 32px !important;
+                    width: 32px;
+                    height:32px;
+                    -webkit-box-align: center;
+                    align-items: center;
+                    display: flex;
+                    -webkit-box-pack: center;
+                    justify-content: center;
+                    max-height: 100%;
+                    max-width: 100%;
+                    overflow: hidden;
+                    position: relative;
+                    border-radius: 50%;
+                }
+            }
+            
+        }
+        :global {
+            .ant-checkbox-wrapper {
+                display: flex;
+                margin-bottom: 1.5rem;
+                margin-left: 0;
+            }
+            .ant-input-affix-wrapper {
+                border: none;
+                background: var(--background-color);
+                .ant-input {
+                    background-color: var(--background-color);
+                }
+            }
+            
+        }
+    }
+}
+
+.chooseBlock {
+    :global {
+        .ant-select-item-option-content {
+            display: flex;
+            align-items: center;
+            & > div:first-child {
+                margin-right: 1rem !important;
+            }
+        }
+    }
+}

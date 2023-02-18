@@ -1,0 +1,116 @@
+.rankings {
+    padding-bottom: 10rem;
+    .heading {
+        text-align: center;
+        position: relative;
+        min-height: 45rem;
+       margin-top: 7rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+        .bgHeading {
+            opacity: 0.6;
+            background: url('../../public/rankingBackground.png') no-repeat;
+            background-size: cover;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            border-radius: 2rem;
+        }
+        h1 {
+            text-transform: uppercase;
+            font-weight: 600;
+            font-size: 4rem;
+            letter-spacing: 0px;
+            z-index: 1;
+        }
+    }
+
+    .listTrending {
+        margin-top: 4.7rem;
+        .titleTrending {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            h4 {
+                margin-bottom: 0;
+            }
+            .filterTime {
+                display: inline-flex;
+                align-items: center;
+                & > div {
+                    cursor: pointer;
+                    padding: 0 0.9rem;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+                .activeDate {
+                    background: var(--green-color);
+                    border-radius: 2rem;
+                }
+            }
+        }
+
+        ul {
+            margin-top: 4rem;
+            padding-left: 0;
+            li {
+                a {
+
+                    border-radius: 2rem;
+                    background-color: rgba(140, 137, 137, 0.47);
+                    padding: 1.7rem;
+                    display: flex;
+                    margin-bottom: 4rem;
+                    align-items: center;
+                    justify-content: space-between;
+                    transition: all 0.2s ease 0s;
+                    .itemInfo {
+                        display: flex;
+                        align-items: center;
+                        .itemIndex {
+                            font-weight: 700;
+                            font-size: 1.6rem;
+                            margin-right: 2rem
+                        }
+                        img {
+                            border-radius: 50%;
+                        }
+                        .itemName {
+                            color: #EEA3FB;
+                            font-weight: 500;
+                            margin-left: 2rem;
+                            text-overflow: ellipsis;
+                            overflow: hidden;
+                            white-space: nowrap;
+                            max-width: 16rem;
+                            padding-right: 0.5rem;
+                        }
+                    }
+                    .itemValue {
+                        span {
+                            display: block;
+                            text-align: right;
+                            font-weight: 500;
+                        }
+                        .valueETH {
+                            font-size: 1.7rem;
+                            white-space: nowrap;
+                        }
+                        .valueUSD {
+                            color: #14B401;
+                        }
+                    }
+                    &:hover {
+                        box-shadow: rgb(13 41 66) 1px 3px 8px 7px;
+                   }
+                }
+            }
+        }
+    }
+}
+  

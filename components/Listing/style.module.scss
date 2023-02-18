@@ -1,0 +1,30 @@
+.tableListing {
+    padding: 1rem;
+    .imgPrice {
+        & > div {
+             width: 1.6rem;
+            height: 1.6rem;
+            margin-right: 0.5rem;
+            img {
+                object-fit: contain;
+            }
+        }
+       
+    }
+    .buyListing {
+        -webkit-box-align: center;
+        align-items: center;
+        border-radius: 5px;
+        border: 1px solid rgb(50, 145, 233);
+        color: rgb(50, 145, 233);
+        cursor: pointer;
+        display: flex;
+        font-weight: 600;
+        -webkit-box-pack: center;
+        justify-content: center;
+        font-size: 10px;
+        height: 25px;
+        padding: 2px 0px 0px 8px;
+        width: 76px;
+    }
+}

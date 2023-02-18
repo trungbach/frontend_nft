@@ -1,0 +1,72 @@
+.tradingHistory {
+    .eventHistory {
+        svg {
+            font-size: 1.8rem;
+            margin-right: 0.5rem;
+        }
+    }
+    .wrapperFrom {
+        display: flex;
+        align-items: center;
+        & > div {
+            margin-right: 1rem !important;
+            img {
+                border-radius: 50%;
+            }
+        }
+    }
+    .tablePrice {
+        & > div {
+            margin-right: 1rem !important;
+            img {
+                object-fit: contain;
+            }
+        }
+    }
+    :global {
+        .ant-table-container {
+            max-height: 500px;
+            overflow-y: auto;
+        }
+        .ant-table-content {
+            overflow: auto;
+            padding-bottom: 3rem;
+        }
+       
+        .ant-dropdown-link {
+            color: inherit;
+            border: 1px solid #ccc;
+            padding: 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 3rem;
+            background: #fff;
+            svg {
+                font-size: 1.5rem !important;
+            }
+        }
+    }
+}
+
+.dropdownCustom {
+    & > div {
+        border: 1px solid #ccc;
+        background: #fff;
+        :global {
+            .ant-checkbox-wrapper {
+                border-top-left-radius: 5px;
+                border-top-right-radius: 5px;
+                padding: 1.6rem !important;
+                border-bottom: 1px solid rgb(229, 232, 235);
+                display: flex;
+                align-items: center;
+            }
+            .ant-checkbox-wrapper:first-child {
+                span:first-child {
+                    margin-left: 0.8rem;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,11 @@
+.layout {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    & > nav + div {
+        margin-top: 7.2rem;
+        background-image: radial-gradient( circle 610px at 50.2% 10.6%,  rgba(5,8,114,1) 0%, rgba(7,3,53,1) 0% );
+        flex-grow: 1;
+    }
+}

@@ -1,0 +1,161 @@
+@import '@/styles/base.scss';
+
+.banner {
+    position: relative;
+    .bannerBackground {
+        background-size: cover;
+        background-color: rgb(255, 255, 255);
+        background-position: center center;
+        opacity: 0.3;
+        filter: blur(8px);
+        -webkit-mask: linear-gradient(rgb(255, 255, 255), transparent);
+        @media (min-width: 993px) {
+            & {
+                height: 586px;
+            }
+        }
+    }
+    .bannerContent {
+        padding-top: 4rem;
+        @media (min-width: 769px) {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            padding-top: 12rem;
+        }
+      
+        h1 {
+            @media (min-width: 768px) {
+                position: absolute;
+                top: -5rem;
+                left: 4rem;
+                margin-top: 0;
+                font-size: 4rem;
+            }
+            margin-top: 5rem;
+            font-size: 3rem;
+            font-weight: 700;
+        }
+
+        .cta {
+            @media (min-width: 993px) {
+                & {
+                    padding-left: 3rem;
+                }
+            }
+            @media (min-width: 768px) {
+                & {
+                    grid-template-columns: 1fr 1fr;
+                    margin-top: 5rem;
+                }
+            }
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 3.4rem;
+            margin-top: 2rem;
+            .ctaButton {
+                cursor: pointer;
+                padding: 8.5rem 9rem;
+                border-radius: 1rem;
+                color: var(--text-color);
+                font-weight: 600;
+                font-size: 2rem;
+                white-space: nowrap;
+                position: relative;
+                transition: all 0.2s ease 0s;
+                background-size: 100% 100% !important;
+                span {
+                    position: absolute;
+                    top: calc(100% + 10px) ;
+                    left: 50%;
+                    transform: translateX(-50%);
+                }
+                &:hover {
+                    box-shadow: rgb(13 41 66) 1px 3px 8px 7px;
+                    transform: translateY(-4px);
+
+                }
+                @media (min-width: 993px) {
+                    & {
+                    }
+                }
+                margin-bottom: 3rem;
+               
+            }
+            .ctaButton:first-child {
+                background-size: 100% 100%;
+                background-image: url('../../../public/allBanner.png');
+            }
+            .ctaButton:nth-child(2){
+                background: url('../../../public/audioBanner.jpeg');
+            }
+            .ctaButton:nth-child(3) {
+                background: url('../../../public/videoBanner.jpeg');
+            }
+            .ctaButton:last-child {
+                background: url('../../../public/imageBanner.png');
+            }
+        }
+      
+        .bannerRight {
+            padding-top: 0px; 
+            display: flex;
+            justify-content: center; 
+            align-items: center;  
+        }
+        .hotItem {
+            & > div:first-child {
+                padding: 1rem;
+                border-radius: 1.5rem 1.5rem 0 0;
+                background: var(--lighten-background);
+            }
+            width: 100%;
+            background-color: transparent;
+            z-index: 2;
+            border-radius: 2rem;
+            overflow: hidden;
+            @media (min-width: 993px) {
+                & {
+                    max-width: 55rem;
+                    margin-right: 3rem;
+                }
+            }
+            &:hover {
+                box-shadow: #0d2942 0px -5px 5px 2px;
+                transform: translateY(-4px);
+                transition: box-shadow 0.3s ease-in 0s;
+            }
+            .favoriteContent {
+                div {
+                    color: var(--green-color);
+                }
+            }
+            :global {
+                .ant-card {
+                    overflow: hidden;
+                    border: none;
+                    background: transparent;
+                    .ant-card-cover {
+                        background-color: var(--text-color);
+                      
+                    }
+                    .ant-card-body {
+                        background: var(--text-color);
+                        padding-left: 2rem;
+                        padding-top: 0.3rem;
+                        padding-bottom: 0.5rem;
+                        font-weight: 700;
+                       
+                        h4 {
+                            color: var(--secondary-color);
+                            margin-bottom: 0.1rem;
+                            font-weight: 700;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,149 @@
+@import '@/styles/base.scss';
+
+.assets {
+    display: flex;
+    overflow-y: hidden;
+    .showFilter {
+        bottom: 20px;
+        display: flex;
+        -webkit-box-pack: center;
+        justify-content: center;
+        position: fixed;
+        width: 100%;
+        z-index: 4;
+        .buttonShowFilter {
+            -webkit-box-align: center;
+            align-items: center;
+            background-color: rgb(32, 129, 226);
+            border-radius: 25px;
+            box-shadow: rgb(0 0 0 / 25%) 0px 1px 20px;
+            color: white;
+            display: flex;
+            font-size: 16px;
+            font-weight: 600;
+            height: 50px;
+            -webkit-box-pack: center;
+            justify-content: center;
+            width: 292px;
+            border: 0;
+        }
+    }
+    
+    .mainAsset {
+        flex: 1;
+        overflow-y: auto;
+        height: 100%;   
+        padding: 4rem;
+        @media (max-width: 767px) {
+            & {
+                padding: 0;
+            }
+        }
+        .heading {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 4rem;
+            @media (max-width: 767px) {
+                & {
+                    flex-direction: column;
+                    .totalResult {
+                        margin-bottom: 2rem;
+                        margin-top: 2rem;
+                    }
+                }
+            }
+            .totalResult {
+                font-weight: 500;
+
+            }
+            .filter {
+                display: flex;
+                justify-content: center;
+                @media (max-width: 767px) {
+                    flex-direction: column;
+                    width: 100%;
+                    & > div:first-child {
+                        margin-bottom: 1rem;
+                    }
+                    & > div {
+                        width: 90% !important;
+                        margin-left: auto;
+                        margin-right: auto !important;
+                    }
+                }
+                & > div {
+                    width: 200px;
+                }
+                & > div:first-child {
+                    margin-right: 1rem;
+                }
+                :global {
+                    .ant-select-selection-placeholder {
+                        color: var(--text-color);
+                    }
+                }
+            }
+        }
+        .assetsList {
+            display: grid;
+            position: relative;
+            overflow-x: auto;
+            .emptyResponse {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                border: 1px solid #ccc;
+                width: 100%;
+                padding: 4rem 0;
+                border-radius: 0.7rem;
+                position: absolute;
+                h1 {
+                    font-size: 3.5rem;
+                }
+                .secondaryButton {
+                    height: auto;
+                    margin-top: 2rem;
+                }
+            }
+        }
+        .listAttributeFilter {
+            padding: 0;
+            display: flex;
+            align-items: center;
+            margin-bottom: 5rem;
+            .attributeFilter {
+                -webkit-box-align: center;
+                align-items: center;
+                display: flex;
+                min-height: 54px;
+                padding: 10px 20px;
+                border: 1px solid rgb(21, 178, 229);
+                background-color: rgba(21, 178, 229, 0.06);
+                border-radius: 5px;
+                overflow: hidden;
+                cursor: pointer;
+                margin: 0 0.5rem;
+                font-weight: 600;
+                span {
+                    margin-left: 1rem;
+                    width: 2.4rem;
+                    height: 2.4rem;
+                }
+                &:hover {
+                    box-shadow: rgb(4 17 29 / 25%) 0px 0px 8px 0px;
+                }
+            }
+            .removeFilter {
+                -webkit-box-align: center;
+                align-items: center;
+                color: rgb(32, 129, 226);
+                cursor: pointer;
+                display: flex;
+                opacity: 0.9;
+                margin-left: 0.5rem;
+            }
+        }
+    }
+}

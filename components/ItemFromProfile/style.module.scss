@@ -1,0 +1,12 @@
+@import '@/styles/base.scss';
+
+.emptyItem {
+    text-align: center;
+    color: var(--text-color);
+    font-weight: 500;
+    margin: 0 auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+}

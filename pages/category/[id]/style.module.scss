@@ -1,0 +1,125 @@
+@import '@/styles/base.scss';
+
+.collection {
+    padding-bottom: 6rem;
+    .banner {
+        position: relative;
+        height: 25rem;
+    }
+    .content {
+        .heading {
+            text-align: center;
+            overflow: hidden;
+            margin: 0 auto 2rem 0;
+            h1 {
+                font-weight: 600;
+                font-size: 4rem;
+                letter-spacing: 0px;
+                max-width: 600px;
+                margin: 6.5rem auto 4rem;
+                text-align: center;
+            }
+
+            p {
+                line-height: 1.7;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: normal;
+                color: #cfdae4;;
+                font-size: 1.6rem;
+                transition: all 0.5s linear;
+                max-width: 800px;
+                margin: 0 auto;
+
+            }
+            .seeMoreBtn {
+                max-width: 300px;
+                padding: 1rem 0;
+                border-radius: 2rem;
+                margin: 0 auto;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                svg {
+                    font-size: 1.7rem;
+                }
+                &:hover {
+                    background-color: rgba(138, 147, 155, 0.06);
+                }
+            }
+        }
+        .filter {
+            margin-bottom: 3.6rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            
+            .filterSelect {
+                margin: 0 1.5rem;
+                @media (max-width: 768px) {
+                    margin: 0 2rem 0 0;
+                    :global {
+                        .ant-select {
+                            width: 100%;
+                        }
+                    }
+                }
+                flex-grow: 1;
+            }
+
+            .buttonShowFilter {
+                display: flex;
+                align-items: center;
+                background: var(--lighten-background);
+                border: none;
+                border-radius: var(--border-radius);
+                &:hover {
+                    color: inherit;
+                    transition: all 0.2s ease 0s;
+                    box-shadow: rgb(4 17 29 / 25%) 0px 0px 8px 0px;
+                }
+                svg {
+                    font-size: 2.5rem;
+                    color: var(--text-color);
+                }
+            }
+            & > div:first-child {
+                flex-grow: 100;
+                @media (max-width: 768px) {
+                    & {
+                        width: 100%;
+                        margin-bottom: 1.5rem;
+                    }
+                }
+            }
+            :global {
+                .ant-select, button {
+                    height: 4.5rem;
+                }
+                .ant-select-selector {
+                    height: 4.5rem !important;
+                }
+                .ant-input-affix-wrapper {
+                    border-color: var(--background-color);
+                    &:hover {
+                        transition: all 0.2s ease 0s;
+                        box-shadow: rgb(4 17 29 / 25%) 0px 0px 8px 0px;
+                        opacity: 1;
+                    }
+                    height: 4.5rem;
+                    .anticon-search {
+                        font-size: 2rem;
+                        user-select: none;
+                        color: rgb(112, 122, 131);
+                    }
+                    input {
+                        margin-left: 1.6rem;
+                        font-size: 1.6rem;
+                    }
+                }
+                
+            }
+        }
+    }
+}

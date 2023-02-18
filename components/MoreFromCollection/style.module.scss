@@ -1,0 +1,15 @@
+.moreFromCollection {
+    display: inline-flex;
+    padding: 1rem;
+    & > div {
+        margin-right: 1rem;
+        min-width: 26rem;
+        max-width: 28rem;
+        :global {
+            .ant-card {
+                border: 1px solid var(--background-color);
+            }
+        }
+    }
+   
+}

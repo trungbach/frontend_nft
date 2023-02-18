@@ -1,0 +1,106 @@
+@import '@/styles/base.scss';
+
+.secondaryButton {
+    width: 12rem;
+}
+
+.collections {
+    display: flex; 
+    flex-direction: column;
+    justify-content: center;
+    padding: 5rem;
+    .secondaryButton {
+        width: 10rem;
+        height: auto;
+    }
+    .imageAsset {
+        position: relative;
+        margin: 2rem 0;
+    }
+    .fileContainer {
+        input {
+            opacity: 0;
+        }
+    }
+    .labelHidden {
+        position: relative;
+        opacity: 0;
+    }
+    .labelForFileLogo {
+        padding: 10rem 5rem !important;
+        max-width: 200px;
+        height:200px;
+        position: relative;
+        border-radius: 50%;
+        border: 3px dashed rgb(229, 232, 235);
+        margin-top: 6px;
+        -webkit-box-align: center;
+        align-items: center;
+        -webkit-box-pack: center;
+        justify-content: center;
+        display: flex;
+        flex-direction: column;
+        img {
+            border-radius: 50%;
+        }
+        label {
+            font-weight: bold;
+            color: rgb(170, 170, 170);
+            cursor: pointer;
+            svg {
+                font-size: 8.5rem;
+                color: rgb(170, 170, 170);
+            }
+        }
+    }
+    .labelForFile  {
+        padding: 10rem 5rem !important;
+        width: 100%;
+        max-width: 350px;
+        position: relative;
+        border-radius: 5px;
+        border: 3px dashed rgb(229, 232, 235);
+        margin-top: 6px;
+        -webkit-box-align: center;
+        align-items: center;
+        -webkit-box-pack: center;
+        justify-content: center;
+        display: flex;
+        flex-direction: column;
+        label {
+            font-weight: bold;
+            color: rgb(170, 170, 170);
+            cursor: pointer;
+
+        }
+    }
+
+    :global {
+        .ant-select:hover .ant-select-selector {
+            border-color: var(--background-color) !important;
+        }
+           
+        .ant-input {
+            transition: all 0.2s ease 0s;
+            color: var(--text-color);
+            padding: 1rem;
+            background: var(--lighten-background);
+            border-radius: 1rem;
+            border: 1px solid var(--lighten-background);
+            &:hover {
+                border: 1px solid var(--background-color);
+                border-right-width: 1px !important;
+                box-shadow: rgb(4 17 29 / 25%) 0px 0px 8px 0px;
+            }
+        }
+        .ant-form-item {
+            margin-bottom: 4.5rem;
+           
+        }
+        .ant-form-item-label label {
+            font-weight: 500;
+            font-size: 1.6rem;
+        }
+
+    }
+}

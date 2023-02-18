@@ -1,0 +1,201 @@
+@import '@/styles/base.scss';
+
+.collection {
+    padding-bottom: 15rem;
+    .banner {
+        position: relative;
+        height: 30rem;
+    }  
+
+    @media (max-width: 767px) {
+        :global {
+          .ant-tabs-content-holder {
+            overflow-x: auto;
+          }
+          .ant-tabs-tabpane {
+              padding-left: 0 !important;
+          }
+          .ant-tabs-nav {
+              max-width: 100% !important;
+          }
+          .ant-tabs-nav-list {
+            justify-content: center;
+            width: 100%;
+          }
+        }
+        
+      }
+    
+    .content {
+        position: relative;
+        .heading {
+            text-align: center;
+            overflow: hidden;
+
+            margin: 0 auto 2rem 0;
+            .avatar {
+                position: absolute;
+                left: 50%;
+                transform: translateX(-50%);
+                top: -6.5rem;
+                width: 13rem;
+                height: 13rem;
+                img {
+                    border-radius: 50%;
+                }
+            }
+            .about {
+                display: flex;
+                justify-content: center;
+                margin-bottom: 3rem;
+            }
+            
+            h1 {
+                font-weight: 600;
+                font-size: 3rem;
+                letter-spacing: 0px;
+                max-width: 600px;
+                margin: 6.5rem auto 1rem;
+                text-align: center;
+            }
+
+        }
+        .taList {
+            color: var(--text-color);
+        }
+
+        .gridFour {
+            grid-template-columns: repeat(4, minmax(24rem, 28rem)) !important;
+        }
+       
+        .social {
+            display: flex;
+            align-items: center;
+            @media (max-width: 576px) {
+                position: relative;
+                top: 0;
+                right: 0;
+                margin-bottom: 2rem;
+            }
+            position: absolute;
+            top: 3rem;
+            right: 3rem;
+            span {
+                height: 50px;
+                width: 50px;
+                align-items: center;
+                flex-direction: column;
+                font-size: 14px;
+                justify-content: center;
+                padding: 10px 0px;
+                text-align: center;
+                color: rgb(138, 147, 155);
+                display: inline-flex;
+                border: 1px solid rgb(229, 232, 235);
+                border-radius: 5px;
+            }
+            svg, i {
+                font-size: 2rem;
+            }
+        }
+        .filter {
+            margin-bottom: 3.6rem;
+            margin-top: 8.6rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            
+            .filterSelect {
+                margin: 0 1.5rem;
+                @media (max-width: 768px) {
+                    margin: 0 2rem 0 0;
+                    :global {
+                        .ant-select {
+                            width: 100%;
+                        }
+                    }
+                }
+                flex-grow: 1;
+            }
+
+            .buttonShowFilter {
+                display: flex;
+                align-items: center;
+                &:hover {
+                    color: inherit;
+                    transition: all 0.2s ease 0s;
+                    box-shadow: rgb(4 17 29 / 25%) 0px 0px 8px 0px;
+                    border-color: #d9d9d9;
+                }
+                svg {
+                    font-size: 2.5rem;
+                }
+            }
+            & > div:first-child {
+                flex-grow: 100;
+                @media (max-width: 768px) {
+                    & {
+                        width: 100%;
+                        margin-bottom: 1.5rem;
+                    }
+                }
+            }
+            :global {
+                .ant-select, button {
+                    height: 4.5rem;
+                }
+                .ant-select-selector {
+                    height: 4.5rem !important;
+                }
+                .ant-input-affix-wrapper {
+                    &:hover {
+                        transition: all 0.2s ease 0s;
+                        box-shadow: rgb(4 17 29 / 25%) 0px 0px 8px 0px;
+                        background-color: rgb(251, 253, 255);
+                        opacity: 1;
+                        border-color: rgb(112, 122, 131);
+                    }
+                    height: 4.5rem;
+                    border-radius: 0.4rem;
+                    .anticon-search {
+                        font-size: 2rem;
+                        user-select: none;
+                        color: rgb(112, 122, 131);
+                    }
+                    input {
+                        margin-left: 1.6rem;
+                        color: rgba(4, 17, 29, 0.75);
+                        font-size: 1.6rem;
+                        background-color: transparent;
+                    }
+                }
+               
+            }
+        }
+        :global {
+            .ant-tabs-tab {
+                &:hover {
+                    .ant-tabs-tab-btn {
+                        color: var(--hover-text) !important;
+                    }
+                }
+            }
+            .ant-tabs-tab .ant-tabs-tab-btn {
+                font-weight: 600;
+                font-size: 16px;
+                color: rgba(255, 255, 255, 0.5);
+            }
+            .ant-tabs > .ant-tabs-nav, .ant-tabs > div > .ant-tabs-nav {
+                max-width: 120px;
+            }
+            .ant-tabs-tab.ant-tabs-tab-active .ant-tabs-tab-btn {
+                color: var(--text-color) !important;
+                
+                &:hover {
+                    color: var(--hover-text) !important;
+                }
+            }
+        }
+    }
+}

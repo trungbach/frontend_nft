@@ -1,0 +1,170 @@
+.nav {
+    background-color: rgb(4, 17, 29);
+    padding: 0 1.6rem !important;
+    height: 7.2rem;
+    box-shadow: rgb(4 17 29 / 25%) 0px 0px 8px 0px;
+    z-index: 100;
+    @media (max-width: 768px) {
+        .navRight {
+            background-color: var(--background-color);
+            padding-bottom: 2rem;
+        }
+        :global {
+            .navbar-collapse {
+                position: absolute;
+                top: 100%;
+                left: 0px;
+                right: 0px;
+            }
+        }
+    }
+  
+    .logo {
+        display: flex;
+        align-items: center;
+        padding-right: 2.4rem;
+        svg {
+            fill: #fff;
+        }
+        & > div {
+            display: flex;
+            align-items: center;
+        }
+        img {
+            width: 17.4rem;
+            height: 4.9rem;
+        }
+    }
+
+    .form {
+        flex-grow: 20;
+        @media (max-width: 768px) {
+            max-width: 50%;
+            margin-right: auto;
+        }
+        @media (max-width: 767px) {
+            margin-right: auto;
+            margin-left: auto;
+            max-width: 70%;
+        }
+    }
+    :global {
+        .navbar-collapse {
+            flex-grow: 21;
+        }
+    }
+
+    .navRight {
+        display: flex;
+        align-items: center;
+        margin-left: auto;
+       @media (max-width: 768px) {
+           padding: 2rem 0;
+       }
+        a, .walletBtn {
+            height: 7.2rem;
+            display: flex;
+            align-items: center;
+            font-size: 1.6rem;
+            font-weight: 600;
+            padding: 0 2rem !important;
+            border-bottom: 2px solid transparent;
+            color: rgba(255, 255, 255, 0.75) !important;
+            svg {
+                font-size: 3rem;
+            }
+            &:hover {
+                border-bottom: 2px solid var(--green-color);
+                color: #fff !important;
+            }
+        }
+        .ctaWallet {
+            display: flex;
+            align-items: center;
+            :global {
+                .nav-link {
+                    img {
+                        border-radius: 50% !important;
+                    }
+                }
+            }
+            a {
+                position: relative;
+                padding: 0 !important;
+            }
+        }
+        .balanceHSN {
+            font-weight: 500;
+            color: var(--green-color);
+            background: #fff;
+            margin-left: 3rem;
+            padding: 0.7rem 1.7rem;
+            cursor: pointer;
+            border-radius: 1.7rem 0 0 1.7rem;
+            position: relative;
+            right: -1rem;
+        }
+    }
+    :global {
+        .ant-input-affix-wrapper {
+            height: 4rem;
+            max-width: 700px;
+            border-radius: 2.4rem;
+            background-color:#D8D8D8;
+            &:hover {
+                background-color: #D8D8D8;
+            }
+            .anticon-search {
+                font-size: 2rem;
+                user-select: none;
+                color: rgb(112, 122, 131);
+            }
+            input {
+                margin-left: 1.6rem;
+                color: rgba(4, 17, 29, 0.75);
+                font-size: 1.6rem;
+                background-color: #D8D8D8;
+            }
+        }
+       
+    }
+}
+
+
+.menuMarket, .menuStats, .menuResource, .menuUser {
+    :global {
+        background-color: var(--background-color) !important;
+        .ant-dropdown-menu-item {
+            transition: all 0.2s ease 0s;
+            box-shadow: rgb(4 17 29 / 25%) 0px 0px 8px 0px;
+            background-color: var(--background-color);
+            opacity: 1;
+            color: rgb(53, 56, 64) !important;
+            width: 100%;
+            font-weight: 600;
+            padding: 1.6rem;
+            display: flex;
+            a {
+                display: flex;
+                align-items: center;
+                font-size: 1.6rem;
+                span {
+                    margin-left: 1rem;
+                }
+            }
+            &:hover {
+                background-color: lighten(#0D2048, 10);
+            }
+        }
+        .ant-dropdown-menu-item:not(:last-child) {
+            border-bottom: 1px solid #263a4d;
+        }
+        .ant-dropdown-menu-title-content {
+            display: flex;
+            align-items: center;
+            img {
+                margin-right: 1rem;
+            }
+        }
+    }
+}
