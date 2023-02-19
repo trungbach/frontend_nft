@@ -2,7 +2,7 @@ import detailService from '@/services/detail'
 
 export async function getDetailItem(payload) {
     const res = await detailService.getDetailItem(payload)
-    return res.body
+    return res?.body
 }
 
 export async function getMoreFromCollection(payload) {
