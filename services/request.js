@@ -22,9 +22,10 @@ const request = {
       .get(config.NEXT_PUBLIC_API_DOMAIN + url)                                              
       .query(data)
       .set('Accept', 'application/json')    
-      .set('x-access-token', getTokenFromServer(req, res))
+      .set('x-access-token', getTokenFromServer(req, res) || '')
       .catch(err => {
-        if(err.status === 401) {
+        console.log('err', err.status)
+        if(err.status === 401 || err.status === 403) {
           handleExprireToken(req, res)
         }
       }),
